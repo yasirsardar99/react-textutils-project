@@ -22,7 +22,7 @@ export default function TextForm(props) {
     const handleClearClick= ()=>
     {
         console.log("submission is clicked " + text);
-        const nextText =(" ");
+        const nextText =("");
         setText(nextText);
       
     }
@@ -31,24 +31,59 @@ export default function TextForm(props) {
         console.log("On change was clicked");
         setText(event.target.value);
     }
+    //button mode changing
+    const [btnText , setBtnText] = useState("Enable Dark Mode")
 
+// styling state
+    const [MyStyle, setMyStyle] = useState(
+      {
+        color: 'black',
+        backgroundColor: 'white'
+      }
+    );
 
+    const toggleStyle = ()=>{
+            if(MyStyle.color === 'black')
+            {
+                setMyStyle({
+                    color: 'white',
+                    backgroundColor: 'black'
+                })  
+                setBtnText("Enable Light Mode")
+              
+            }
+            
+            else{
+                setMyStyle({
+                    color: 'black',
+                    backgroundColor: 'white'  
+                })
+                setBtnText("Enable Dark Mode");
+            }
+         
 
+    }
     const [text, setText] = useState();
+
+  
     return (
    <>
    
    
 
-   <div className="container-sm-50% d-flex justify-content-center mvh-100 align-items-center border border-dark border-3 rounded-5">
+    <div className="container-sm-50% d-flex justify-content-center mvh-100 align-items-center border border-dark border-3 rounded-5" style={MyStyle}>
+  
    <form>
+    {/*  switch button here*/}
+   <div className="container my-4 d-flex justify-content-center ">
+    <button className="btn btn-light btn-outline-dark " type='button' onClick={toggleStyle}>{btnText}</button>
+   </div>
+
+         {/*heading here*/}
    <h5 className="text-center my-5">
     <b>{props.heading}</b>
    </h5>
-<div className="mb-3 text-center my-4 border border-dark rounded-3">
 
-<input type="email" className="form-control text-center" id="exampleFormControlInput1" placeholder="name@example.com" />
-</div>
 <div className="mb-3 my-4 text-center border border-dark rounded-3">
 
 <textarea className="form-control text-center" id="exampleFormControlTextarea1"  placeholder="suggestions" value={text} onChange={handleOnChange} rows="7"></textarea>
