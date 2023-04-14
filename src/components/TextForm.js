@@ -47,7 +47,7 @@ export default function TextForm(props) {
             {
                 setMyStyle({
                     color: 'white',
-                    backgroundColor: 'black'
+                    backgroundColor: 'black',
                 })  
                 setBtnText("Enable Light Mode")
               

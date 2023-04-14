@@ -3,15 +3,33 @@ import React from "react"
 import './index.css';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-
+import About from "./components/About";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 export function App(){
   return (
   <>
-    <Navbar Name="YASIR SARDAR"/>
+  <Router>
+    <Navbar Name="Text Utilities "/>
  <div className="container">
- <TextForm heading="LOWERCASE TO UPPERCASE"/>
+ <Routes>
+          <Route path="/textform" element={<TextForm heading="LOWERCASE TO UPPERCASE"/>} />
+          
+        
+
+          <Route path="/about" element={<About/>} />
+          
+         
+          
+         
+ </Routes>
+
  </div>
+ </Router>
   </>
   )
 }
