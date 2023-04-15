@@ -14,7 +14,7 @@ export function App(){
   return (
   <>
   <Router>
-    <Navbar Name="Text Utilities "/>
+    <Navbar Name="text Utils project"/>
  <div className="container">
  <Routes>
           <Route path="/textform" element={<TextForm heading="LOWERCASE TO UPPERCASE"/>} />
