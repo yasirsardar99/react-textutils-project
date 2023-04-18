@@ -3,17 +3,17 @@ import React from 'react'
 function About() {
   return (
     <>
-    <div className="bg-light">
+    <div className="bg-bright">
   <div className="container py-5">
     <div className="row h-100 align-items-center py-5">
       <div className="col-lg-6">
-        <h1 className="display-4">About us page</h1>
+        <h1 className="display-4"><b>About us page</b></h1>
         <p className="lead text-muted mb-0">Good to see you here. My name is Yasir. I am a web developer and right now i am learning react and literally it is amazing.</p>
-        <p className="lead text-muted">My github is:  <a href="https://github.com/yasirsardar99" className="text-muted"> 
+        <p className="lead text-muted ">My github is:  <a href="https://github.com/yasirsardar99" className="text-muted"> 
                     <u>github</u></a>
         </p>
       </div>
-      <div className="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" className="img-fluid"/></div>
+      <div className="col-lg-6 d-none d-lg-block"><img src="Artboard 1.png" alt="" className="img-thumbnail"/></div>
     </div>
   </div>
 </div>

@@ -89,9 +89,9 @@ export default function TextForm(props) {
 <textarea className="form-control text-center" id="exampleFormControlTextarea1"  placeholder="suggestions" value={text} onChange={handleOnChange} rows="7"></textarea>
 </div>
 <div className="d-grid gap-3 d-md-block  ">
-  <button className="btn btn-light btn-outline-dark m-3" type="button" onClick={handleUpClick}>Change To Upper Case</button>
-  <button className="btn btn-light btn-outline-dark m-3" type="button" onClick={handlelowClick}>Change To Lower Case</button>
-  <button className="btn btn-light btn-outline-dark m-3" type="button" onClick={handleClearClick}>Clear Text</button>
+  <button disabled={text.length===0} className="btn btn-light btn-outline-dark m-3" type="button" onClick={handleUpClick}>Change To Upper Case</button>
+  <button disabled={text.length===0} className="btn btn-light btn-outline-dark m-3" type="button" onClick={handlelowClick}>Change To Lower Case</button>
+  <button disabled={text.length===0} className="btn btn-light btn-outline-dark m-3" type="button" onClick={handleClearClick}>Clear Text</button>
 </div>
 <div className="container text-center my-4">
     <h3>
